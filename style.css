@@ -3,15 +3,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
-* {
-    box-sizing: border-box;
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
+    min-height: 50px;
 }
 
 .nav-list {
@@ -49,13 +54,13 @@ header {
     color: rgb(154, 154, 163);
 }
 
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
-}
+
   
 .section {
     width: 50%;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cecbcb;
 }
 
 @media (max-width: 768px) {
@@ -70,17 +75,36 @@ header {
     border-radius: 50%;
 }
 
+.section-title {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #5c5c5c;
+}
+
 .main-title {
     font-size: 32px;
     font-weight: 300;
     line-height: 50px;
+    position: relative;
+}
+
+.main-title::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    margin-left: -70px;
+    width: 140px;
+    height: 2px;
+    background-color: #5c5c5c;
 }
 
 .section-profile {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    border-bottom: 1px solid #5c5c5c;
     padding: 50px 30mm 35px;
     text-transform: uppercase;
 }
@@ -88,4 +112,54 @@ header {
 .section-subtitle {
     font-weight: 300;
     color: #5c5c5c;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.section-item {
+    margin-bottom: 10px;
+}
+
+.section-item a {
+    text-decoration: none;
+    color: #829985;
+}
+
+
+.section-list {
+    padding: 0;
+    list-style: none;
+}
+
+.footer {
+    background-color: #5c5c5c;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.rss {
+    width: 121px;
+    height: 45px;
+    background-image: url(./assets/rss.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section-languages {
+    border-bottom: 0;
 }
